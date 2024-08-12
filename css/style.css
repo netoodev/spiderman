@@ -612,6 +612,38 @@
   transform: translate(-50%, -50%);
 }
 
+.slider-points {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  z-index: 150;
+}
+
+.point {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 150;
+  transition: 0.7s ease;
+}
+
+.space-point {
+  padding: 12px;
+  cursor: pointer;
+  margin: 24px 0;
+}
+
+.img-slider {
+  transition: 0.7s ease;
+}
+
+.active-point {
+  background-color: rgba(255, 255, 255, 0.99);
+  transform: scale(2);
+  transition: 0.7s ease;
+}
+
 .s-0 {
   margin: 0;
   padding: 0;
