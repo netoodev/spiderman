@@ -354,11 +354,23 @@ $gutter: 32px;
   font-size: 200px;
   display: inline-block;
 
+  white-space: nowrap;
+
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 50%;
 
+  text-shadow: 0px 10px 31px 0px rgba($color: #000000, $alpha: .60);
+
   transform: translate(-50%, -50%);
+
+  @include responsive(s){
+    font-size: 112px;
+  }
+
+  @include responsive(k){
+    font-size: 104px;
+  }
 }
 
 .spider-hero {
@@ -368,6 +380,10 @@ $gutter: 32px;
   z-index: 100;
 
   transform: translate(-50%, -50%) scale(1.5);
+  
+  @include responsive(s){
+    transform: translate(-50%, -50%) scale(2.6);
+  }
 }
 
 .nav-link {
@@ -380,5 +396,67 @@ $gutter: 32px;
 
   &:hover{
     opacity: .4;
+  }
+}
+
+.cta {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+
+  z-index: 150;
+
+  @include responsive(s){
+    top: 65%;
+  }
+  
+}
+
+.div-play {
+  position: absolute;
+  top: 50%;
+  right: 30%;
+  z-index: 150;
+}
+
+.cta-play {
+  width: 120px;
+  height: 120px;
+  position: relative;
+
+  border-radius: 50%;
+  background-color: rgba(17, 25, 41, .5);
+
+  backdrop-filter: blur(8px);
+  border: 2px solid #111929;
+
+  transition: .7s ease;
+
+  &::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-image: url('../../svg/icon-play.svg');
+    background-size: cover;
+    transform: translate(-50%, -50%);
+
+    width: 32px;
+    height: 32px;
+    z-index: -1;
+  } 
+
+  &:hover{
+    backdrop-filter: blur(2px);
+    transform: scale(1.2);
+  }
+
+  h6 {
+    white-space: nowrap;
+
+    position: absolute;
+    top: 50%;
+    left: 140%;
+    transform: translate(-50%, -50%);
   }
 }
